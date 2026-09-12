@@ -404,35 +404,7 @@ a{color:inherit;text-decoration:none}
 .mod-grid{animation:fadeUp .9s .42s cubic-bezier(.2,.7,.3,1) both}
 .items{animation:fadeUp .8s .2s cubic-bezier(.2,.7,.3,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-/* ===== 明显高级感增强 ===== */
-/* 背景：纹理加强 + 顶部大光晕 */
-body{background:
-    repeating-linear-gradient(45deg,rgba(169,126,47,.028) 0 1px,transparent 1px 6px),
-    repeating-linear-gradient(-45deg,rgba(169,126,47,.02) 0 1px,transparent 1px 9px),
-    radial-gradient(1500px 720px at 50% -18%,rgba(216,179,106,.22),transparent 62%),
-    radial-gradient(1100px 560px at 82% -12%,rgba(201,161,90,.16),transparent 60%),
-    radial-gradient(900px 520px at -8% 108%,rgba(201,161,90,.10),transparent 55%),
-    linear-gradient(180deg,#f8f4ec 0%,#f2ecdf 55%,#f8f4ec 100%)}
-/* 背景浮动金色光斑 */
-body::before{content:"";position:fixed;inset:-25%;z-index:0;pointer-events:none;
-  background:radial-gradient(620px 420px at 28% 18%,rgba(216,179,106,.15),transparent 60%),
-             radial-gradient(720px 520px at 74% 58%,rgba(216,179,106,.12),transparent 60%);
-  animation:goldDrift 18s ease-in-out infinite alternate}
-@keyframes goldDrift{from{transform:translate3d(0,0,0) scale(1)}
-  to{transform:translate3d(3.5%,-2.5%,0) scale(1.06)}}
-.page{position:relative;z-index:1}
-/* 卡片：金色渐变描边边框（明显金框） */
-.kpi,.vizcard,.mod{border:1px solid transparent;
-  background:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) padding-box,
-    linear-gradient(165deg,rgba(216,179,106,.7),rgba(255,255,255,.15) 32%,rgba(216,179,106,.55)) border-box}
-.mod--top{border:1px solid transparent;
-  background:linear-gradient(135deg,rgba(255,250,240,.94),rgba(247,232,198,.9) 55%,rgba(242,220,174,.94)) padding-box,
-    linear-gradient(165deg,#e0bd6e,rgba(216,179,106,.35) 35%,#a97e2f) border-box;
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);backdrop-filter:blur(14px) saturate(1.15)}
-/* 副标题金线加粗 */
-.head .kicker::before,.head .kicker::after{height:2px;
-  background:linear-gradient(90deg,transparent,rgba(169,126,47,.9),transparent)}
-/* 重点推荐滚动条 */
+/* ===== 重点推荐滚动条 ===== */
 .ticker{display:flex;align-items:center;gap:12px;margin:22px 0 0;border-radius:14px;overflow:hidden;
   background:linear-gradient(90deg,rgba(216,179,106,.16),rgba(255,255,255,.5) 30%,rgba(216,179,106,.10));
   border:1px solid rgba(169,126,47,.35);
@@ -448,10 +420,6 @@ body::before{content:"";position:fixed;inset:-25%;z-index:0;pointer-events:none;
 .tk em{font-style:normal;flex:none;color:var(--muted);font-size:11px}
 @keyframes tickerRun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:620px){.ticker-cap{padding:8px 10px;letter-spacing:.12em}}
-/* 入场动画幅度加大 */
-@keyframes riseIn{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:none}}
-@media(max-width:620px){@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}}
 /* 移动端：减弱动效，避免视觉负担 */
 @media(max-width:620px){
   .mod{animation:none}
