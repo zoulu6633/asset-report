@@ -334,6 +334,27 @@ a{color:inherit;text-decoration:none}
 .bar-num{font-family:var(--mono);font-size:13px;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
 /* KPI 大数字增强 */
 .kpi .n{font-size:clamp(28px,7vw,46px);letter-spacing:.01em}
+/* 重点推荐：独立金色高亮大卡片 */
+.mod--top{grid-column:1/-1;position:relative;
+  background:linear-gradient(135deg,#fffaf0,#f7e8c6 55%,#f2dcae);
+  border-color:rgba(169,126,47,.5);padding:20px 22px 18px;
+  box-shadow:0 0 0 1px rgba(169,126,47,.28),0 16px 44px rgba(169,126,47,.20)}
+.mod--top::before{height:3px;
+  background:linear-gradient(90deg,transparent 5%,rgba(169,126,47,.95) 50%,transparent 95%);
+  background-size:220% 100%;animation:flowX 3s linear infinite}
+.mod--top .idx{font-size:28px;color:var(--accent)}
+.mod--top h3{font-size:21px;letter-spacing:.06em}
+.mod--top p{max-width:48em}
+.mod--top .go{font-size:15px;font-weight:700;color:var(--accent)}
+.mod--top .num{font-size:19px}
+.mod--top .num b{font-size:24px}
+.badge{position:absolute;top:14px;right:16px;z-index:2;
+  background:linear-gradient(90deg,#a97e2f,#d8b36a);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:.14em;padding:5px 12px;border-radius:99px;
+  animation:badgePulse 2.4s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 8px rgba(169,126,47,.35)}
+  50%{box-shadow:0 0 20px rgba(169,126,47,.75)}}
+@media(max-width:620px){.mod--top{padding:16px 16px 14px}.badge{top:10px;right:10px}}
 @media(max-width:760px){.viz-grid{grid-template-columns:1fr}}
 /* 移动端：减弱动效，避免视觉负担 */
 @media(max-width:620px){

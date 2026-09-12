@@ -334,6 +334,27 @@ a{color:inherit;text-decoration:none}
 .bar-num{font-family:var(--mono);font-size:13px;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
 /* KPI 大数字增强 */
 .kpi .n{font-size:clamp(28px,7vw,46px);letter-spacing:.01em}
+/* 重点推荐：独立金色高亮大卡片 */
+.mod--top{grid-column:1/-1;position:relative;
+  background:linear-gradient(135deg,#fffaf0,#f7e8c6 55%,#f2dcae);
+  border-color:rgba(169,126,47,.5);padding:20px 22px 18px;
+  box-shadow:0 0 0 1px rgba(169,126,47,.28),0 16px 44px rgba(169,126,47,.20)}
+.mod--top::before{height:3px;
+  background:linear-gradient(90deg,transparent 5%,rgba(169,126,47,.95) 50%,transparent 95%);
+  background-size:220% 100%;animation:flowX 3s linear infinite}
+.mod--top .idx{font-size:28px;color:var(--accent)}
+.mod--top h3{font-size:21px;letter-spacing:.06em}
+.mod--top p{max-width:48em}
+.mod--top .go{font-size:15px;font-weight:700;color:var(--accent)}
+.mod--top .num{font-size:19px}
+.mod--top .num b{font-size:24px}
+.badge{position:absolute;top:14px;right:16px;z-index:2;
+  background:linear-gradient(90deg,#a97e2f,#d8b36a);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:.14em;padding:5px 12px;border-radius:99px;
+  animation:badgePulse 2.4s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 8px rgba(169,126,47,.35)}
+  50%{box-shadow:0 0 20px rgba(169,126,47,.75)}}
+@media(max-width:620px){.mod--top{padding:16px 16px 14px}.badge{top:10px;right:10px}}
 @media(max-width:760px){.viz-grid{grid-template-columns:1fr}}
 /* 移动端：减弱动效，避免视觉负担 */
 @media(max-width:620px){
@@ -356,13 +377,13 @@ a{color:inherit;text-decoration:none}
   <p class="lead">一份按区、按平台、按报名状态组织起来的资产租赁快报。五个来源站点全覆盖，点开卡片逐层下钻，查看每一处挂牌的完整资料。</p>
   <div class="meta">
     <span>数据日期 <b>2026-09-12</b></span>
-    <span>生成时间 <b>2026/09/12 15:02</b></span>
+    <span>生成时间 <b>2026/09/12 15:19</b></span>
     <span>重点六区 <b>138</b> 条报名中</span>
   </div>
 </div>
 <div class="kpis"><div class="kpi hot"><div class="n" data-n="138">0</div><div class="t">报名中</div></div><div class="kpi warn"><div class="n" data-n="1893">0</div><div class="t">已过期</div></div><div class="kpi "><div class="n" data-n="2031">0</div><div class="t">合计条目</div></div><div class="kpi "><div class="n" data-n="0">0</div><div class="t">今日新增</div></div></div>
 <div class="viz-grid"><div class="vizcard"><div class="vizcard-h">平台来源分布<span class="viz-en">By Platform</span></div><div class="donut"><div class="donut-svg"><svg viewBox="0 0 160 160" width="168" height="168"><circle cx="80" cy="80" r="60" fill="none" stroke="#a97e2f" stroke-width="22" stroke-dasharray="267.10 109.89" stroke-dashoffset="-0.00" transform="rotate(-90 80 80)"><animate attributeName="stroke-dasharray" values="0 376.99;267.10 109.89" dur="1.1s" fill="freeze"/></circle><circle cx="80" cy="80" r="60" fill="none" stroke="#c9a15a" stroke-width="22" stroke-dasharray="107.84 269.15" stroke-dashoffset="-267.10" transform="rotate(-90 80 80)"><animate attributeName="stroke-dasharray" values="0 376.99;107.84 269.15" dur="1.1s" fill="freeze"/></circle><circle cx="80" cy="80" r="60" fill="none" stroke="#e0c084" stroke-width="22" stroke-dasharray="2.04 374.95" stroke-dashoffset="-374.95" transform="rotate(-90 80 80)"><animate attributeName="stroke-dasharray" values="0 376.99;2.04 374.95" dur="1.1s" fill="freeze"/></circle><text x="80" y="78" text-anchor="middle" class="donut-total">2031</text><text x="80" y="98" text-anchor="middle" class="donut-cap">总条目</text></svg></div><div class="donut-lg"><div class="lg"><i style="background:#a97e2f"></i><span class="lg-name">江苏产权(e交易)</span><span class="lg-num">1439</span><span class="lg-pct">70.9%</span></div><div class="lg"><i style="background:#c9a15a"></i><span class="lg-name">南京公共资源</span><span class="lg-num">581</span><span class="lg-pct">28.6%</span></div><div class="lg"><i style="background:#e0c084"></i><span class="lg-name">中国融通</span><span class="lg-num">11</span><span class="lg-pct">0.5%</span></div></div></div></div><div class="vizcard"><div class="vizcard-h">区域分布 TOP<span class="viz-en">By District</span></div><div class="bars"><div class="bar-row"><span class="bar-name">鼓楼区</span><span class="bar-track"><i class="bar-fill" style="width:100.0%"></i></span><b class="bar-num">412</b></div><div class="bar-row"><span class="bar-name">江宁区</span><span class="bar-track"><i class="bar-fill" style="width:63.1%"></i></span><b class="bar-num">260</b></div><div class="bar-row"><span class="bar-name">其他/未标明</span><span class="bar-track"><i class="bar-fill" style="width:57.0%"></i></span><b class="bar-num">235</b></div><div class="bar-row"><span class="bar-name">栖霞区</span><span class="bar-track"><i class="bar-fill" style="width:40.8%"></i></span><b class="bar-num">168</b></div><div class="bar-row"><span class="bar-name">浦口区</span><span class="bar-track"><i class="bar-fill" style="width:38.3%"></i></span><b class="bar-num">158</b></div><div class="bar-row"><span class="bar-name">玄武区</span><span class="bar-track"><i class="bar-fill" style="width:37.6%"></i></span><b class="bar-num">155</b></div><div class="bar-row"><span class="bar-name">江北新区</span><span class="bar-track"><i class="bar-fill" style="width:35.9%"></i></span><b class="bar-num">148</b></div><div class="bar-row"><span class="bar-name">建邺区</span><span class="bar-track"><i class="bar-fill" style="width:31.6%"></i></span><b class="bar-num">130</b></div></div></div></div>
-<div class="mod-grid mod-grid--tall"><a class="mod" href="sections/top10/index.html" aria-label="重点推荐 TOP10"><span class="idx">Ⅰ</span><h3>重点推荐 TOP10</h3><p>六区报名中、资料完整且未过截止日的前十项。排序=加权评分：租期长(50%) + 单价低(30%) + 面积大(20%)，候选集内按归一化打分。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="10">0</b> 项</span></div></a><a class="mod" href="sections/times/index.html" aria-label="按时间筛选"><span class="idx">Ⅱ</span><h3>按时间筛选</h3><p>近半个月以日为单位，查看每天发布的挂牌项目，掌握发布节奏。</p><div class="go">进入浏览 → <span class="num">近15天</span></div></a><a class="mod" href="sections/pending/index.html" aria-label="报名项目"><span class="idx">Ⅲ</span><h3>报名项目</h3><p>正在挂牌中的资产租赁项目，可实时跟进截止日期与竞价状态。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="138">0</b> 项</span></div></a><a class="mod" href="sections/districts/index.html" aria-label="按区域"><span class="idx">Ⅳ</span><h3>按区域</h3><p>以南京各区为线索，逐区查看该区域内正在挂牌与过往的租赁资产。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="2031">0</b> 项</span></div></a></div>
+<div class="mod-grid mod-grid--tall"><a class="mod mod--top" href="sections/top10/index.html" aria-label="重点推荐 TOP10"><span class="badge">重点推荐</span><span class="idx">TOP</span><h3>重点推荐 TOP10</h3><p>六区报名中、资料完整且未过截止日的前十项。排序=加权评分：租期长(50%) + 单价低(30%) + 面积大(20%)，候选集内按归一化打分。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="10">0</b> 项</span></div></a><a class="mod" href="sections/times/index.html" aria-label="按时间筛选"><span class="idx">Ⅱ</span><h3>按时间筛选</h3><p>近半个月以日为单位，查看每天发布的挂牌项目，掌握发布节奏。</p><div class="go">进入浏览 → <span class="num">近15天</span></div></a><a class="mod" href="sections/pending/index.html" aria-label="报名项目"><span class="idx">Ⅲ</span><h3>报名项目</h3><p>正在挂牌中的资产租赁项目，可实时跟进截止日期与竞价状态。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="138">0</b> 项</span></div></a><a class="mod" href="sections/districts/index.html" aria-label="按区域"><span class="idx">Ⅳ</span><h3>按区域</h3><p>以南京各区为线索，逐区查看该区域内正在挂牌与过往的租赁资产。</p><div class="go">进入浏览 → <span class="num"><b class="nnum" data-n="2031">0</b> 项</span></div></a></div>
 </div>
 <footer class="foot">
   <span>南京资产租赁信息汇总 · 多级页报告</span>
