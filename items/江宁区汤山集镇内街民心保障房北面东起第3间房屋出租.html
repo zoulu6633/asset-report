@@ -109,8 +109,8 @@ a{color:inherit;text-decoration:none}
 .head .meta b{color:var(--accent);font-family:var(--mono);font-variant-numeric:tabular-nums}
 
 /* ===== KPI 数据大屏卡（首页）===== */
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 30px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 12px 14px;
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:22px 0 30px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 16px 20px;
   text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden;
   animation:kpiGlow 4s ease-in-out infinite;transition:transform .2s}
 .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
@@ -124,7 +124,7 @@ a{color:inherit;text-decoration:none}
   50%{box-shadow:0 0 0 1px rgba(169,126,47,.28),0 0 24px rgba(169,126,47,.16),0 12px 34px rgba(120,90,40,.14)}}
 .kpi::after{content:"";position:absolute;inset:0;
   background:radial-gradient(120px 60px at 50% 0%,rgba(169,126,47,.18),transparent 70%)}
-.kpi .n{font-family:var(--mono);font-size:clamp(26px,7vw,42px);font-weight:600;
+.kpi .n{font-family:var(--mono);font-size:clamp(36px,9vw,56px);font-weight:600;
   background:linear-gradient(180deg,#d8b36a,#a97e2f);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 2px 8px rgba(169,126,47,.35));
@@ -325,6 +325,7 @@ a{color:inherit;text-decoration:none}
 .article .stat b{animation:numGlow 3s ease-in-out infinite}
 /* ===== 数据可视化大屏：图表卡 ===== */
 .viz-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.viz-grid--one{grid-template-columns:minmax(0,680px);justify-content:center}
 .vizcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;
   box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .vizcard:hover{transform:translateY(-3px);
